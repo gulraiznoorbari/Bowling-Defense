@@ -6,21 +6,16 @@ using UnityEngine.UI;
 public class BuildingSystem : MonoBehaviour
 {
     RaycastHit hit;
-    [SerializeField] bool m_gridOn;
-    [SerializeField] float m_gridSize;
-    [SerializeField] Toggle m_gridToggle;
-    [SerializeField] LayerMask m_layerMask;
-    [SerializeField] GameObject[] m_object;
-    [SerializeField] Vector3 m_mousePosition;
-    [SerializeField] GameObject m_pendingObject;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    [SerializeField] private bool m_gridOn;
+    [SerializeField] private float m_gridSize;
+    [SerializeField] private Toggle m_gridToggle;
+    [SerializeField] private LayerMask m_layerMask;
+    [SerializeField] private GameObject[] m_object;
+    [SerializeField] private Vector3 m_mousePosition;
+    [SerializeField] private GameObject m_pendingObject;
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (m_pendingObject != null)
         {
@@ -39,11 +34,6 @@ public class BuildingSystem : MonoBehaviour
         }
     }
 
-    void Pendingobject()
-    {
-        m_pendingObject = null;
-    }
-
     private void FixedUpdate()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -51,6 +41,11 @@ public class BuildingSystem : MonoBehaviour
         {
             m_mousePosition = hit.point;
         }
+    }
+
+    private void Pendingobject()
+    {
+        m_pendingObject = null;
     }
 
     public void placement(int index)
@@ -69,8 +64,8 @@ public class BuildingSystem : MonoBehaviour
             m_gridOn = false;
         }
     }
-    
-    float RoundToNearestGrid(float pos)
+
+    private float RoundToNearestGrid(float pos)
     {
         float xDiff = pos % m_gridSize;
         pos -= xDiff;

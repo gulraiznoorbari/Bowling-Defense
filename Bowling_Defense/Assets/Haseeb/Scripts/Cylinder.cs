@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Cylinder : MonoBehaviour
 {
-    [SerializeField] float Health;
-    [SerializeField] Ball ball;
+    [SerializeField] private float Health;
+    [SerializeField] private Ball ball;
 
-    void Start()
-    {
-
-    }
-
-    void Update()
+    private void Update()
     {
         if (Health <= 0)
         {
@@ -21,10 +16,12 @@ public class Cylinder : MonoBehaviour
 
         Debug.Log("Barrier Health : " + Health);
     }
+
     private void OnCollisionEnter(Collision other)
     {
         ball = FindObjectOfType<Ball>();
     }
+
     private void OnCollisionStay(Collision other)
     {
         if (other.gameObject.CompareTag("Ball"))
