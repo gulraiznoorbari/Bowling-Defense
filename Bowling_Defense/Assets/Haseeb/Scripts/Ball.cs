@@ -6,18 +6,19 @@ public class Ball : MonoBehaviour
 {
     public static Ball Instance;
     Rigidbody rb;
-    [SerializeField] float Speed;
-    [SerializeField] float speed;
-    [SerializeField] float Health;
-    [SerializeField] Vector3 Scale;
+    [SerializeField] private float Speed;
+    [SerializeField] private float speed;
+    [SerializeField] private float Health;
+    [SerializeField] private Vector3 Scale;
+    
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         rb.AddForce(Vector3.forward * Speed);
         if(Health <= 0)
@@ -26,7 +27,8 @@ public class Ball : MonoBehaviour
         }
         Debug.Log("Ball Health : " + Health);
     }
-    void OnCollisionStay(Collision other)
+
+    private void OnCollisionStay(Collision other)
     {
         if (other.gameObject.CompareTag("Barriers"))
         {
@@ -34,6 +36,7 @@ public class Ball : MonoBehaviour
             //transform.localScale = Vector3.Lerp(transform.localScale, Scale, Time.deltaTime);
         }
     }
+
     public void health()
     {
         Health -= Time.deltaTime;
