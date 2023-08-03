@@ -9,6 +9,7 @@ public class Magnet : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
     }
     private void OnTriggerEnter(Collider other)
     {

@@ -41,6 +41,7 @@ Material:
     - Color_E76ED749: {r: 0.2352941, g: 0.23921567, b: 0.47843134, a: 1}
     - _ColorBottom: {r: 1, g: 0.63529414, b: 0.427451, a: 0}
     - _ColorTop: {r: 1, g: 0.9215687, b: 0.6745098, a: 0}
+  m_BuildTextureStacks: []
 --- !u!114 &2913146365021582382
 MonoBehaviour:
   m_ObjectHideFlags: 11

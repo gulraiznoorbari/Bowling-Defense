@@ -48,9 +48,10 @@ public class BuildingSystem : MonoBehaviour
         m_pendingObject = null;
     }
 
-    public void placement(int index)
+    public void placement()
     {
-        m_pendingObject = Instantiate(m_object[index], m_mousePosition, transform.rotation);
+        var range = Random.Range(0, m_object.Length);
+        m_pendingObject = Instantiate(m_object[range], m_object[range].transform.position, m_object[range].transform.rotation);
     }
 
     public void GridToggle()

@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public static Ball Instance;
     Rigidbody rb;
     [SerializeField] private float Speed;
-    [SerializeField] private float speed;
+    [SerializeField] private float StopSpeed;
     [SerializeField] private float Health;
     [SerializeField] private Vector3 Scale;
     
@@ -30,9 +29,9 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-        if (other.gameObject.CompareTag("Barriers"))
+        if (other.gameObject.CompareTag("Barrier"))
         {
-            Speed = Speed - speed * Time.deltaTime;
+            Speed = Speed - StopSpeed * Time.deltaTime;
             //transform.localScale = Vector3.Lerp(transform.localScale, Scale, Time.deltaTime);
         }
     }
