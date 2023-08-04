@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        rb.AddForce(Vector3.forward * Speed);
+        rb.AddForce(Vector3.forward * Speed * Time.deltaTime);
         if(Health <= 0)
         {
             Destroy(gameObject);

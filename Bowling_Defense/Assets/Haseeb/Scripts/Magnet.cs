@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class Magnet : MonoBehaviour
 {
-    [SerializeField] float MagnetStrength;
-    [SerializeField] List<Rigidbody> IronBalls = new List<Rigidbody>();
+    [SerializeField] private float MagnetStrength;
+    [SerializeField] private List<Rigidbody> IronBalls = new List<Rigidbody>();
 
-    private void FixedUpdate()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
