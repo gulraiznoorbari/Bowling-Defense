@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2832630146383874777}
   - component: {fileID: 2832630146383874758}
   - component: {fileID: 2832630146383874759}
+  - component: {fileID: -5772722319077852848}
   m_Layer: 0
   m_Name: Ball (5)
   m_TagString: Ball
@@ -129,3 +130,20 @@ MonoBehaviour:
   StopSpeed: 0.5
   Health: 5
   Scale: {x: 0.5, y: 0.5, z: 0.5}
+--- !u!114 &-5772722319077852848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832630146383874756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ff8918fcdff444abea27ae2d63af07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amount: 50
+  Coin: {fileID: 190639515837519218, guid: 22a39728db48989448763d746ec62a37, type: 3}
+  Effect: {fileID: 1029683450922114, guid: 911d39b31e356794d971139c547d1e61, type: 3}
+  CoinDestroyTime: 2
+  EffectDestroyTime: 2
