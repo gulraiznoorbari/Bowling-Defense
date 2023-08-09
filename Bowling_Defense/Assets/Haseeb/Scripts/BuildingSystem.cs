@@ -6,15 +6,35 @@ using UnityEngine.UI;
 public class BuildingSystem : MonoBehaviour
 {
     RaycastHit hit;
+    private bool IsPlaying; // After
+    private float EffectDuration; // After
+    [SerializeField] float Reset; // After
+    [SerializeField] float EffectTime; // After
     [SerializeField] private bool m_gridOn;
     [SerializeField] private float m_gridSize;
     [SerializeField] private Toggle m_gridToggle;
     [SerializeField] private LayerMask m_layerMask;
-    [SerializeField] private GameObject[] m_object;
+    [SerializeField] private GameObject[] m_effect;
+    [SerializeField] private int[] m_effectPrices;
+    [SerializeField] private GameObject CursorEffect;
     [SerializeField] private Vector3 m_mousePosition;
     [SerializeField] private GameObject m_pendingObject;
-
+    [SerializeField] private GameObject m_reserveObject;
+    [SerializeField] bool IsPendingTrue;
+    [SerializeField] bool IsYes;
+    private Vector3 CursorOffset = new Vector3(0, 0.1f, 0);
+    Bank bank;
     // Update is called once per frame
+    private void Start()
+    {
+        bank = FindObjectOfType<Bank>();
+        EffectDuration = 0f;
+        CursorEffect.SetActive(false);
+        foreach (GameObject effect in m_effect)
+        {
+            effect.SetActive(false);
+        }
+    }
     private void Update()
     {
         if (m_pendingObject != null)
@@ -22,15 +42,49 @@ public class BuildingSystem : MonoBehaviour
             if (m_gridOn)
             {
                 m_pendingObject.transform.position = new Vector3(RoundToNearestGrid(m_mousePosition.x), RoundToNearestGrid(m_mousePosition.y), RoundToNearestGrid(m_mousePosition.z));
+                CursorEffect.transform.position = new Vector3(RoundToNearestGrid(m_mousePosition.x), RoundToNearestGrid(m_mousePosition.y + 0.1f), RoundToNearestGrid(m_mousePosition.z));
             }
             else
             {
-                m_pendingObject.transform.position = m_mousePosition;
+                m_pendingObject.transform.position = m_mousePosition + new Vector3(0, 0.2f, 0);
+                CursorEffect.transform.position = m_mousePosition + CursorOffset;
             }
-            if (Input.GetMouseButtonDown(0))
+            IsYes = true;
+        }
+
+        if (!IsPlaying && IsPendingTrue) // After
+        {
+            EffectTime -= Time.deltaTime;
+            if (EffectTime <= EffectDuration)
             {
-                Pendingobject();
+                foreach (GameObject effect in m_effect)
+                {
+                    effect.SetActive(false);
+                    IsPendingTrue = false;
+                }
             }
+        }
+    }
+
+    public void YesPlace()
+    {
+        if (IsYes)
+        {
+            m_pendingObject.SetActive(true); //After
+            CursorEffect.SetActive(false);
+            IsPendingTrue = true;
+            //Invoke("Pendingobject", EffectTime); //After
+            Pendingobject();
+            IsYes = false;
+            // if (Input.GetMouseButtonDown(0))
+            // {
+            //     m_pendingObject.SetActive(true); //After
+            //     IsPendingTrue = true;
+            //     //Invoke("Pendingobject", EffectTime); //After
+            //     Pendingobject();
+            //     IsYes = false;
+            // }
+
         }
     }
 
@@ -42,21 +96,51 @@ public class BuildingSystem : MonoBehaviour
             m_mousePosition = hit.point;
         }
     }
+    public void PointerDown(int index) // After
+    {
+        IsPlaying = true;
+        if (IsPlaying)
+        {
+            int Cash = bank.CurrentCash();
+
+            if (Cash >= m_effectPrices[index])
+            {
+                EffectTime = Reset;
+                int Cost = m_effectPrices[index];
+                bank.CaseWithdrawl(Cost);
+                m_pendingObject = Instantiate(m_effect[index]);
+                m_reserveObject = m_pendingObject;
+                //m_pendingObject = m_effect[index];
+                m_pendingObject.SetActive(false);
+                m_effect[index].SetActive(false);
+                CursorEffect.SetActive(true);
+
+                //Effect[item].SetActive(true);
+            }
+        }
+    }
+    public void PointerUp(int index) // After
+    {
+        IsPlaying = false;
+
+    }
 
     private void Pendingobject()
     {
         m_pendingObject = null;
+        Destroy(m_reserveObject, EffectTime);
     }
 
-    public void placement()
-    {
-        var range = Random.Range(0, m_object.Length);
-        m_pendingObject = Instantiate(m_object[range], m_object[range].transform.position, m_object[range].transform.rotation);
-    }
+    // public void placement(int index)
+    // {
+    //     m_pendingObject = m_object[index]; // After
+    //     //var range = Random.Range(0, m_object.Length);
+    //     //m_pendingObject = Instantiate(m_object[index], m_object[index].transform.position, m_object[index].transform.rotation);
+    // }
 
     public void GridToggle()
     {
-        if(m_gridToggle.isOn)
+        if (m_gridToggle.isOn)
         {
             m_gridOn = true;
         }
