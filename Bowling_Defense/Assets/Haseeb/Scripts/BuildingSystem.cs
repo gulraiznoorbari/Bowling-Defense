@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class BuildingSystem : MonoBehaviour
 {
+    [SerializeField] CameraShake cameraShake;
+    [SerializeField] float CameraShakeDuration;
+    [SerializeField] float CameraShakeMagnitude;
     RaycastHit hit;
-    private bool IsPlaying; // After
-    private float EffectDuration; // After
-    [SerializeField] float Reset; // After
-    [SerializeField] float EffectTime; // After
+    private bool IsButtonDown; // After
+    // private float EffectDuration; // After
+    // [SerializeField] float Reset; // After
+    // [SerializeField] float EffectTime; // After
     [SerializeField] private bool m_gridOn;
     [SerializeField] private float m_gridSize;
     [SerializeField] private Toggle m_gridToggle;
@@ -20,20 +23,20 @@ public class BuildingSystem : MonoBehaviour
     [SerializeField] private Vector3 m_mousePosition;
     [SerializeField] private GameObject m_pendingObject;
     [SerializeField] private GameObject m_reserveObject;
-    [SerializeField] bool IsPendingTrue;
-    [SerializeField] bool IsYes;
+    // [SerializeField] bool IsPendingTrue;
+    // [SerializeField] bool IsYes;
     private Vector3 CursorOffset = new Vector3(0, 0.1f, 0);
     Bank bank;
     // Update is called once per frame
     private void Start()
     {
         bank = FindObjectOfType<Bank>();
-        EffectDuration = 0f;
+        //EffectDuration = 0f;
         CursorEffect.SetActive(false);
-        foreach (GameObject effect in m_effect)
-        {
-            effect.SetActive(false);
-        }
+        // foreach (GameObject effect in m_effect)
+        // {
+        //     effect.SetActive(false);
+        // }
     }
     private void Update()
     {
@@ -49,43 +52,51 @@ public class BuildingSystem : MonoBehaviour
                 m_pendingObject.transform.position = m_mousePosition + new Vector3(0, 0.2f, 0);
                 CursorEffect.transform.position = m_mousePosition + CursorOffset;
             }
-            IsYes = true;
+            //IsYes = true;
         }
 
-        if (!IsPlaying && IsPendingTrue) // After
-        {
-            EffectTime -= Time.deltaTime;
-            if (EffectTime <= EffectDuration)
-            {
-                foreach (GameObject effect in m_effect)
-                {
-                    effect.SetActive(false);
-                    IsPendingTrue = false;
-                }
-            }
-        }
+        // if (!IsPlaying && IsPendingTrue) // After
+        // {
+        //     //IsPendingTrue = false;
+        //     // EffectTime -= Time.deltaTime;
+        //     // if (EffectTime <= EffectDuration)
+        //     // {
+        //     //     foreach (GameObject effect in m_effect)
+        //     //     {
+        //     //         effect.SetActive(false);
+        //     //         IsPendingTrue = false;
+        //     //     }
+        //     // }
+        // }
     }
 
     public void YesPlace()
     {
-        if (IsYes)
+        if (m_pendingObject != null)
         {
             m_pendingObject.SetActive(true); //After
+            StartCoroutine(cameraShake.Shake(CameraShakeDuration, CameraShakeMagnitude));
             CursorEffect.SetActive(false);
-            IsPendingTrue = true;
-            //Invoke("Pendingobject", EffectTime); //After
             Pendingobject();
-            IsYes = false;
-            // if (Input.GetMouseButtonDown(0))
-            // {
-            //     m_pendingObject.SetActive(true); //After
-            //     IsPendingTrue = true;
-            //     //Invoke("Pendingobject", EffectTime); //After
-            //     Pendingobject();
-            //     IsYes = false;
-            // }
-
         }
+        // if (IsYes)
+        // {
+        //     m_pendingObject.SetActive(true); //After
+        //     CursorEffect.SetActive(false);
+        //     //IsPendingTrue = true;
+        //     //Invoke("Pendingobject", EffectTime); //After
+        //     Pendingobject();
+        //     IsYes = false;
+        //     // if (Input.GetMouseButtonDown(0))
+        //     // {
+        //     //     m_pendingObject.SetActive(true); //After
+        //     //     IsPendingTrue = true;
+        //     //     //Invoke("Pendingobject", EffectTime); //After
+        //     //     Pendingobject();
+        //     //     IsYes = false;
+        //     // }
+
+        // }
     }
 
     private void FixedUpdate()
@@ -98,21 +109,21 @@ public class BuildingSystem : MonoBehaviour
     }
     public void PointerDown(int index) // After
     {
-        IsPlaying = true;
-        if (IsPlaying)
+        IsButtonDown = true;
+        if (IsButtonDown)
         {
             int Cash = bank.CurrentCash();
 
             if (Cash >= m_effectPrices[index])
             {
-                EffectTime = Reset;
+                //EffectTime = Reset;
                 int Cost = m_effectPrices[index];
                 bank.CaseWithdrawl(Cost);
                 m_pendingObject = Instantiate(m_effect[index]);
+                m_pendingObject.SetActive(false);
                 m_reserveObject = m_pendingObject;
                 //m_pendingObject = m_effect[index];
-                m_pendingObject.SetActive(false);
-                m_effect[index].SetActive(false);
+                //m_effect[index].SetActive(false);
                 CursorEffect.SetActive(true);
 
                 //Effect[item].SetActive(true);
@@ -121,14 +132,14 @@ public class BuildingSystem : MonoBehaviour
     }
     public void PointerUp(int index) // After
     {
-        IsPlaying = false;
+        IsButtonDown = false;
 
     }
 
     private void Pendingobject()
     {
         m_pendingObject = null;
-        Destroy(m_reserveObject, EffectTime);
+        Destroy(m_reserveObject, 3.8f);
     }
 
     // public void placement(int index)
