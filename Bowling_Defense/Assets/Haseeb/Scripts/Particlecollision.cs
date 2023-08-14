@@ -5,16 +5,16 @@ using UnityEngine;
 public class Particlecollision : MonoBehaviour
 {
     
-    [SerializeField] int Amount;
-    [SerializeField] GameObject Coin;
+    // [SerializeField] int Amount;
+    // [SerializeField] GameObject Coin;
     [SerializeField] GameObject Effect;
-    [SerializeField] float CoinDestroyTime;
+    // [SerializeField] float CoinDestroyTime;
     [SerializeField] float EffectDestroyTime;
-    Bank bank;
+    // Bank bank;
     // Start is called before the first frame update
     void Start()
     {
-        bank = FindObjectOfType<Bank>();
+        // bank = FindObjectOfType<Bank>();
     }
 
     // Update is called once per frame
@@ -24,9 +24,9 @@ public class Particlecollision : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        bank.CashDeposite(Amount);
+        // bank.CashDeposite(Amount);
         Destroy(Instantiate(Effect, transform.position, Quaternion.identity), EffectDestroyTime);
         Destroy(gameObject);
-        Destroy(Instantiate(Coin, transform.position, Coin.transform.rotation), CoinDestroyTime);
+        // Destroy(Instantiate(Coin, transform.position, Coin.transform.rotation), CoinDestroyTime);
     }
 }

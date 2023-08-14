@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 7443209536412486034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,7 +97,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.90067387
+  m_Radius: 2
   m_Center: {x: -0.00000017881393, y: 0, z: 0}
 --- !u!114 &7443209536412486028
 MonoBehaviour:
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54de3c2d4fb8e7c4fa99dced5ff69e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 900
+  Speed: 650
   StopSpeed: 0.5
   Health: 5
   Scale: {x: 0.5, y: 0.5, z: 0.5}
@@ -127,10 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ff8918fcdff444abea27ae2d63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amount: 90
-  Coin: {fileID: 190639515837519218, guid: 22a39728db48989448763d746ec62a37, type: 3}
-  Effect: {fileID: 1029683450922114, guid: 911d39b31e356794d971139c547d1e61, type: 3}
-  CoinDestroyTime: 1
+  Effect: {fileID: 191186, guid: 079954accd64b32419ec069129c81273, type: 3}
   EffectDestroyTime: 2
 --- !u!54 &6800596608883646974
 Rigidbody:
