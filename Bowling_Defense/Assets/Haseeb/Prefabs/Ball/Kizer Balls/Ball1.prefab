@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -157834515510385673}
   m_Layer: 0
   m_Name: Ball1
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ff8918fcdff444abea27ae2d63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Effect: {fileID: 191186, guid: 079954accd64b32419ec069129c81273, type: 3}
+  Effect: {fileID: 1298315647077242, guid: 72160083e1a24a94b88cb874c61f8d39, type: 3}
   EffectDestroyTime: 2
 --- !u!54 &-157834515510385673
 Rigidbody:
