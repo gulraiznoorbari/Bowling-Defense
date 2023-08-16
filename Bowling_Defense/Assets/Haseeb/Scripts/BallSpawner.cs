@@ -19,8 +19,8 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] Transform[] BallPrefab;
     [SerializeField] TextMeshProUGUI BallCounter;
     //[SerializeField] Image LevelProgress;
-    // public int TotalBall() => totalball;
-    // public int CurrentBall() => currentball;
+    public int TotalBall() => totalball;
+    public int CurrentBall() => currentball;
     // Start is called before the first frame update
     void Start()
     {

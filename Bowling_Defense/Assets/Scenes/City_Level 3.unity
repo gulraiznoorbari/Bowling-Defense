@@ -1791,13 +1791,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 343946859}
-  m_LocalRotation: {x: 0.0000011697412, y: -0.92616725, z: 0.37711322, w: 0.0000026226044}
-  m_LocalPosition: {x: 2.7014236, y: 51, z: 122.1}
+  m_LocalRotation: {x: 0.0000008174159, y: -0.86902064, z: 0.49477583, w: 0.0000027528492}
+  m_LocalPosition: {x: 3.2, y: 86.4, z: 111.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 44.31, y: -180, z: 0}
+  m_LocalEulerAnglesHint: {x: 59.31, y: -180, z: 0}
 --- !u!64 &348693095
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1967,7 +1967,8 @@ MonoBehaviour:
   XPos: 0
   YPos: 0
   ZPos: 0
-  TotalBall: 10
+  totalball: 0
+  currentball: 0
   SetParent: {fileID: 1095992990}
   BallPrefab:
   - {fileID: 6474361477568686479, guid: 6e5e97ca3b335564dbaaab0693be7b7a, type: 3}
@@ -1975,6 +1976,7 @@ MonoBehaviour:
   - {fileID: 7462744813863422870, guid: c4812e199f2b7964cab3ca598080edce, type: 3}
   - {fileID: 7429283132224357636, guid: 9da2e4823a5a0b440b31b95ce677f0ba, type: 3}
   - {fileID: 1597488322433826891, guid: 75380268b2e25a742a7f5884c9c68ae3, type: 3}
+  BallCounter: {fileID: 0}
 --- !u!4 &433226645
 Transform:
   m_ObjectHideFlags: 0
@@ -2699,7 +2701,8 @@ MonoBehaviour:
   XPos: 0
   YPos: 0
   ZPos: 0
-  TotalBall: 10
+  totalball: 0
+  currentball: 0
   SetParent: {fileID: 1294298944}
   BallPrefab:
   - {fileID: 6474361477568686479, guid: 6e5e97ca3b335564dbaaab0693be7b7a, type: 3}
@@ -2707,6 +2710,7 @@ MonoBehaviour:
   - {fileID: 7462744813863422870, guid: c4812e199f2b7964cab3ca598080edce, type: 3}
   - {fileID: 7429283132224357636, guid: 9da2e4823a5a0b440b31b95ce677f0ba, type: 3}
   - {fileID: 1597488322433826891, guid: 75380268b2e25a742a7f5884c9c68ae3, type: 3}
+  BallCounter: {fileID: 0}
 --- !u!4 &580403608
 Transform:
   m_ObjectHideFlags: 0
@@ -4837,7 +4841,8 @@ MonoBehaviour:
   XPos: 0
   YPos: 0
   ZPos: 0
-  TotalBall: 10
+  totalball: 0
+  currentball: 0
   SetParent: {fileID: 1265103382}
   BallPrefab:
   - {fileID: 6474361477568686479, guid: 6e5e97ca3b335564dbaaab0693be7b7a, type: 3}
@@ -4845,6 +4850,7 @@ MonoBehaviour:
   - {fileID: 7462744813863422870, guid: c4812e199f2b7964cab3ca598080edce, type: 3}
   - {fileID: 7429283132224357636, guid: 9da2e4823a5a0b440b31b95ce677f0ba, type: 3}
   - {fileID: 1597488322433826891, guid: 75380268b2e25a742a7f5884c9c68ae3, type: 3}
+  BallCounter: {fileID: 0}
 --- !u!4 &1012869003
 Transform:
   m_ObjectHideFlags: 0
