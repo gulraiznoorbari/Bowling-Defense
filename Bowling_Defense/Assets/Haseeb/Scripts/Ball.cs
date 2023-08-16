@@ -6,10 +6,12 @@ public class Ball : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] private float Speed;
-    [SerializeField] private float StopSpeed;
-    [SerializeField] private float Health;
-    [SerializeField] private Vector3 Scale;
-    
+    [SerializeField] bool isgamelose;
+    public bool GameLose() => isgamelose;
+    // [SerializeField] private float StopSpeed;
+    // [SerializeField] private float Health;
+    // [SerializeField] private Vector3 Scale;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -20,25 +22,34 @@ public class Ball : MonoBehaviour
     private void Update()
     {
         rb.AddForce(Vector3.forward * Speed * Time.deltaTime);
-        if(Health <= 0)
-        {
-            Destroy(gameObject);
-        }
-        Debug.Log("Ball Health : " + Health);
+        // if(Health <= 0)
+        // {
+        //     Destroy(gameObject);
+        // }
+        // Debug.Log("Ball Health : " + Health);
     }
 
-    private void OnCollisionStay(Collision other)
-    {
-        if (other.gameObject.CompareTag("Barrier"))
-        {
-            Speed = Speed - StopSpeed * Time.deltaTime;
-            //transform.localScale = Vector3.Lerp(transform.localScale, Scale, Time.deltaTime);
-        }
-    }
+    //     private void OnCollisionStay(Collision other)
+    //     {
+    //         if (other.gameObject.CompareTag("Barrier"))
+    //         {
+    //             Speed = Speed - StopSpeed * Time.deltaTime;
+    //             //transform.localScale = Vector3.Lerp(transform.localScale, Scale, Time.deltaTime);
+    //         }
+    //     }
 
-    public void health()
+    //     public void health()
+    //     {
+    //         Health -= Time.deltaTime;
+    //         transform.localScale = transform.localScale - Scale * Time.deltaTime;
+    //     }
+    private void OnCollisionEnter(Collision other)
     {
-        Health -= Time.deltaTime;
-        transform.localScale = transform.localScale - Scale * Time.deltaTime;
+        if (other.gameObject.CompareTag("Pin"))
+        {
+            Debug.Log("Collision Enter");
+            isgamelose = true;
+
+        }
     }
 }

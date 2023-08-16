@@ -22,12 +22,12 @@ public class PrefabHealth : MonoBehaviour
         ball = FindObjectOfType<Ball>();
     }
 
-    private void OnCollisionStay(Collision other)
-    {
-        if (other.gameObject.CompareTag("Ball"))
-        {
-            ball.health();
-            Health -= Time.deltaTime;
-        }
-    }
+    // private void OnCollisionStay(Collision other)
+    // {
+    //     if (other.gameObject.CompareTag("Ball"))
+    //     {
+    //         ball.health();
+    //         Health -= Time.deltaTime;
+    //     }
+    // }
 }
