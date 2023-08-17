@@ -39,7 +39,7 @@ public class BallSpawner : MonoBehaviour
     }
     IEnumerator Ball()
     {
-        for (currentball = 1; currentball <= totalball; currentball++)
+        for (currentball = 1; currentball < totalball; currentball++)
         {
             //currentball++;
             int index = Random.Range(0,BallPrefab.Length);
