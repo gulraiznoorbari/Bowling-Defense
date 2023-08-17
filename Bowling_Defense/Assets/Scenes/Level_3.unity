@@ -9087,7 +9087,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eef85445396ebb04e873c16c3af44525, type: 2}
   m_sharedMaterial: {fileID: 442942094047778680, guid: eef85445396ebb04e873c16c3af44525,
@@ -9448,7 +9448,7 @@ GameObject:
   - component: {fileID: 1361691504}
   - component: {fileID: 1361691503}
   m_Layer: 5
-  m_Name: Exit
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9532,7 +9532,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 915044927}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
-        m_MethodName: ExitButton
+        m_MethodName: BackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
