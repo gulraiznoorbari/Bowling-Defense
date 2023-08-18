@@ -2840,7 +2840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7cf198d3c72659d468a7ce2a07be4c01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4a61541f43ab06842a1b47429cda5d61, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6079,8 +6079,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa77702948adf4a41b5bb81dab8a99c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Reset: 0
-  EffectTime: 0
+  cameraShake: {fileID: 0}
+  CameraShakeDuration: 0
+  CameraShakeMagnitude: 0
   m_gridOn: 1
   m_gridSize: 10
   m_gridToggle: {fileID: 0}
@@ -6093,8 +6094,6 @@ MonoBehaviour:
   m_mousePosition: {x: 0, y: 0, z: 0}
   m_pendingObject: {fileID: 0}
   m_reserveObject: {fileID: 0}
-  IsPendingTrue: 0
-  IsYes: 0
 --- !u!4 &1420629433
 Transform:
   m_ObjectHideFlags: 0
