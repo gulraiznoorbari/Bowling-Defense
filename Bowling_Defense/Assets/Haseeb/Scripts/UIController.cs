@@ -82,7 +82,7 @@ public class UIController : MonoBehaviour
     {
         int CurrentScene = SceneManager.GetActiveScene().buildIndex;
         int NextScene = CurrentScene + 1;
-        SceneManager.LoadScene(NextScene);
+        SceneManager.LoadSceneAsync(NextScene);
     }
     public void BackButton()
     {
