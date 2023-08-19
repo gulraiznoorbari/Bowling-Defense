@@ -78,12 +78,6 @@ public class UIController : MonoBehaviour
         }
         SceneManager.LoadScene(NextScene);
     }
-    public void PlayButton()
-    {
-        int CurrentScene = SceneManager.GetActiveScene().buildIndex;
-        int NextScene = CurrentScene + 1;
-        SceneManager.LoadSceneAsync(NextScene);
-    }
     public void BackButton()
     {
         SceneManager.LoadScene(0);

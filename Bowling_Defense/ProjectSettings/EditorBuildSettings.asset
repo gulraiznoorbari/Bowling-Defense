@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 291189f8fed628f4489a35776037c976
+  - enabled: 1
+    path: Assets/Scenes/Hyper_Casual_Levels/HCG_Levels.unity
+    guid: 694a40b4f3951574ea3cc09ad3b696bf
+  - enabled: 1
+    path: Assets/Scenes/Hyper_Casual_Levels/Level_2.unity
+    guid: b9fdbbfb663508047af1ca9d3415a63a
+  - enabled: 1
+    path: Assets/Scenes/Hyper_Casual_Levels/Level_3.unity
+    guid: c291296693bc87a42945e2df5bd0a67f
+  - enabled: 1
+    path: Assets/Scenes/Themed_Levels/Farm_Levels.unity
+    guid: d1c3109bdb54ad54c8a2b2838528e640
+  - enabled: 1
+    path: Assets/Scenes/Themed_Levels/Farm Theme Level_2.unity
+    guid: 606f5b81c1cdd3047a9961b058adffcb
+  - enabled: 1
+    path: Assets/Scenes/Themed_Levels/Farm Theme Level_3.unity
+    guid: ef9fa3b156fc11942bad155c8b884b47
   m_configObjects: {}
