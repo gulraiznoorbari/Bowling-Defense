@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField] GameObject MainMenuPanel;
     [SerializeField] GameObject ThemeSelectionPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +15,6 @@ public class MainMenuController : MonoBehaviour
         ThemeSelectionPanel.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void PlayButton()
     {
         MainMenuPanel.SetActive(false);
@@ -35,10 +31,10 @@ public class MainMenuController : MonoBehaviour
     }
     public void HCG_Theme()
     {
-        SceneManager.LoadScene("HCG_Levels");
+        SceneManager.LoadSceneAsync("HCG_Levels");
     }
     public void Farm_Theme()
     {
-        SceneManager.LoadScene("Farm_Levels");
+        SceneManager.LoadSceneAsync("Farm_Levels");
     }
 }

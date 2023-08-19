@@ -76,7 +76,7 @@ public class UIController : MonoBehaviour
         {
             NextScene = 0;
         }
-        SceneManager.LoadScene(NextScene);
+        SceneManager.LoadSceneAsync(NextScene);
     }
     public void BackButton()
     {
