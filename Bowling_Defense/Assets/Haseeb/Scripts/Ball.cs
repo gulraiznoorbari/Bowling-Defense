@@ -6,8 +6,11 @@ public class Ball : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] private float Speed;
+    public float BallSpeed{get{return Speed;}}
+    public float DeltaTime{get{return Time.deltaTime;}}
     [SerializeField] bool isgamelose;
     public bool GameLose() => isgamelose;
+    [SerializeField] BallSpawner ballSpawner;
     // [SerializeField] private float StopSpeed;
     // [SerializeField] private float Health;
     // [SerializeField] private Vector3 Scale;
@@ -15,12 +18,14 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     private void Update()
     {
+        
         rb.AddForce(Vector3.forward * Speed * Time.deltaTime);
         // if(Health <= 0)
         // {
@@ -49,7 +54,6 @@ public class Ball : MonoBehaviour
         {
             Debug.Log("Collision Enter");
             isgamelose = true;
-
         }
     }
 }
