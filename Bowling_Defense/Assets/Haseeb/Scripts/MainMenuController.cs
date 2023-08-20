@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] GameObject MainMenuPanel;
+
     public void PlayButton()
     {
         int CurrentSscene = SceneManager.GetActiveScene().buildIndex;
