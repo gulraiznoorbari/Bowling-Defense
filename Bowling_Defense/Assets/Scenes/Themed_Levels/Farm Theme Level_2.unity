@@ -38701,6 +38701,8 @@ MonoBehaviour:
   time: 10
   CurrentTime: 0
   coins: 1
+  play: 0
+  uIController: {fileID: 0}
 --- !u!4 &6437693098406248095
 Transform:
   m_ObjectHideFlags: 0
@@ -38763,6 +38765,8 @@ MonoBehaviour:
   time: 10
   CurrentTime: 0
   coins: 1
+  play: 0
+  uIController: {fileID: 0}
 --- !u!4 &6437693099169730590
 Transform:
   m_ObjectHideFlags: 0
