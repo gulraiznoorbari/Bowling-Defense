@@ -9,32 +9,53 @@ public class Coin : MonoBehaviour
     [SerializeField] float time;
     [SerializeField] float CurrentTime;
     [SerializeField] int coins;
-    
+    [SerializeField] bool play;
+    [SerializeField] UIController uIController;
+
     Bank bank;
-    // Start is called before the first frame update
     private void Start()
     {
+        play = true;
         bank = FindObjectOfType<Bank>();
+        uIController = FindObjectOfType<UIController>();
         CurrentTime = 0;
         CoinsEffect.Stop();
     }
     private void Update()
     {
-        CurrentTime += Time.deltaTime;
-        if(CurrentTime >= time)
+        ParticleImage(play);
+        bool win = uIController.Win();
+        bool lose = uIController.lose();
+        if(win)
         {
-            CoinsEffect.Play();
+            play = false;
         }
-        if(CurrentTime >= time + 0.5f)
+        if(lose)
         {
-            CoinsEffect.Stop(false);
-            CurrentTime = 0;
+            play = false;
         }
-        if(CoinsEffect.isPlaying)
+    }
+
+    private void ParticleImage(bool Active)
+    {
+        if (Active == true)
         {
-            int Cash = 0;
-            Cash += coins;
-            bank.CashDeposite(Cash);
+            CurrentTime += Time.deltaTime;
+            if (CurrentTime >= time)
+            {
+                CoinsEffect.Play();
+            }
+            if (CurrentTime >= time + 0.5f)
+            {
+                CoinsEffect.Stop(false);
+                CurrentTime = 0;
+            }
+            if (CoinsEffect.isPlaying)
+            {
+                int Cash = 0;
+                Cash += coins;
+                bank.CashDeposite(Cash);
+            }
         }
     }
 }

@@ -6,48 +6,26 @@ public class Ball : MonoBehaviour
 {
     Rigidbody rb;
     [SerializeField] private float Speed;
-    public float BallSpeed{get{return Speed;}}
-    public float DeltaTime{get{return Time.deltaTime;}}
     [SerializeField] bool isgamelose;
     public bool GameLose() => isgamelose;
-    [SerializeField] BallSpawner ballSpawner;
-    // [SerializeField] private float StopSpeed;
-    // [SerializeField] private float Health;
-    // [SerializeField] private Vector3 Scale;
-
-    // Start is called before the first frame update
+    [SerializeField] Vector3 BallDestroyPosition;
+    [SerializeField] Vector3 BallPosition;
     private void Start()
     {
-        
+
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     private void Update()
     {
-        
+        BallPosition = transform.position;
         rb.AddForce(Vector3.forward * Speed * Time.deltaTime);
-        // if(Health <= 0)
-        // {
-        //     Destroy(gameObject);
-        // }
-        // Debug.Log("Ball Health : " + Health);
+        if (transform.position.z >= BallDestroyPosition.z)
+        {
+            isgamelose = true;
+        }
     }
-
-    //     private void OnCollisionStay(Collision other)
-    //     {
-    //         if (other.gameObject.CompareTag("Barrier"))
-    //         {
-    //             Speed = Speed - StopSpeed * Time.deltaTime;
-    //             //transform.localScale = Vector3.Lerp(transform.localScale, Scale, Time.deltaTime);
-    //         }
-    //     }
-
-    //     public void health()
-    //     {
-    //         Health -= Time.deltaTime;
-    //         transform.localScale = transform.localScale - Scale * Time.deltaTime;
-    //     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Pin"))

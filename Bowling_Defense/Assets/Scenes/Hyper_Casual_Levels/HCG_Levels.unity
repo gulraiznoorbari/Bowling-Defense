@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
       propertyPath: Time
-      value: 15
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
@@ -34514,7 +34514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraShake: {fileID: 1527061273}
   CameraShakeDuration: 0.2
-  CameraShakeMagnitude: 0.6
+  CameraShakeMagnitude: 0.7
   m_gridOn: 0
   m_gridSize: 1
   m_gridToggle: {fileID: 0}
@@ -34629,6 +34629,8 @@ MonoBehaviour:
   time: 6
   CurrentTime: 0
   coins: 1
+  play: 0
+  uIController: {fileID: 0}
 --- !u!1 &6437693097386557966
 GameObject:
   m_ObjectHideFlags: 0
@@ -34739,6 +34741,8 @@ MonoBehaviour:
   time: 7
   CurrentTime: 0
   coins: 1
+  play: 0
+  uIController: {fileID: 0}
 --- !u!1 &6531029889670919331
 GameObject:
   m_ObjectHideFlags: 0
