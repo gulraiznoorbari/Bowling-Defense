@@ -19,10 +19,10 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] TextMeshProUGUI BallCounter;
     public int TotalBall() => totalball;
     public int CurrentBall() => currentball;
-    [SerializeField] UIController uIController;
+    [SerializeField] UIManager uIController;
     void Start()
     {
-        uIController = FindObjectOfType<UIController>();
+        uIController = FindObjectOfType<UIManager>();
         StartCoroutine(Ball());
     }
     void Update()

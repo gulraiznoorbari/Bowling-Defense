@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hyper_Casual_Levels/Level_3.unity
     guid: c291296693bc87a42945e2df5bd0a67f
+  - enabled: 1
+    path: Assets/Scenes/Hyper_Casual_Levels/Level_4.unity
+    guid: a304b69cad809a1448ce87d267761bc3
   m_configObjects: {}

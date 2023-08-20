@@ -10,14 +10,14 @@ public class Coin : MonoBehaviour
     [SerializeField] float CurrentTime;
     [SerializeField] int coins;
     [SerializeField] bool play;
-    [SerializeField] UIController uIController;
+    [SerializeField] UIManager uIController;
 
     Bank bank;
     private void Start()
     {
         play = true;
         bank = FindObjectOfType<Bank>();
-        uIController = FindObjectOfType<UIController>();
+        uIController = FindObjectOfType<UIManager>();
         CurrentTime = 0;
         CoinsEffect.Stop();
     }
