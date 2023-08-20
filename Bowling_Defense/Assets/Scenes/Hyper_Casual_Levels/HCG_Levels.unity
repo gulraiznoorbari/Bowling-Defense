@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_cashText: {fileID: 1501583469823697509}
-  m_startingCash: 150
+  m_startingCash: 1000
   m_currentCash: 0
   m_string: 
 --- !u!1 &1146689914610238111
@@ -33699,7 +33699,7 @@ MonoBehaviour:
     m_Bits: 8
   m_effect:
   - {fileID: 1593574840045950, guid: 45ae8ce3527dfcf46933282f370e9275, type: 3}
-  m_effectPrices: 32000000
+  m_effectPrices: 96000000
   CursorEffect: {fileID: 1698789429403642652}
   m_mousePosition: {x: 0, y: 0, z: 0}
   m_pendingObject: {fileID: 0}
