@@ -9,14 +9,14 @@ public class UIController : MonoBehaviour
     [SerializeField] GameObject LosePanel;
     [SerializeField] bool IsWin;
     [SerializeField] bool IsLose;
+    public bool Win() => IsWin;
+    public bool lose() => IsLose;
     private BallSpawner ballSpawner;
     private Ball ball;
-    // Start is called before the first frame update
     void Start()
     {
         WinPanel.SetActive(false);
         LosePanel.SetActive(false);
-        //pins = FindObjectOfType<Pins>();
         ballSpawner = FindObjectOfType<BallSpawner>();
     }
 
@@ -40,8 +40,6 @@ public class UIController : MonoBehaviour
         if (currentball == totalball)
         {
             IsWin = true;
-            // Time.timeScale = 0;
-
             if (!IsLose)
             {
                 WinPanel.SetActive(true);
@@ -54,8 +52,6 @@ public class UIController : MonoBehaviour
         if (gamelose == true)
         {
             IsLose = true;
-            // Time.timeScale = 0;
-
             if (!IsWin)
             {
                 LosePanel.SetActive(true);
