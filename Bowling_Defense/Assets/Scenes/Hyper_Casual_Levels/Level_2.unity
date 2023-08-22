@@ -5995,7 +5995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -218.8, y: -1713.6155}
+  m_AnchoredPosition: {x: -220, y: -1713.6155}
   m_SizeDelta: {x: 525, y: 1600}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &210332577
@@ -6431,7 +6431,7 @@ GameObject:
   - component: {fileID: 297961675}
   - component: {fileID: 297961674}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PowerUpArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6454,8 +6454,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -18.4667}
-  m_SizeDelta: {x: 0, y: 1099.5186}
+  m_AnchoredPosition: {x: 5.1119995, y: 124.66849}
+  m_SizeDelta: {x: -296.4941, y: 1283.5493}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297961674
 MonoBehaviour:
@@ -28718,7 +28718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 20.7, y: -1713.6155}
+  m_AnchoredPosition: {x: 22, y: -1713.6155}
   m_SizeDelta: {x: 525, y: 1600}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1833049605
