@@ -114,8 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 400
   isgamelose: 0
-  BallDestroyPosition: {x: 0, y: 0, z: 2060}
-  BallPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &5875041287476208804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +128,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Effect: {fileID: 1298315647077242, guid: 72160083e1a24a94b88cb874c61f8d39, type: 3}
   EffectDestroyTime: 2
+  NonDestroyEffect:
+  - {fileID: 6718764990754317988, guid: 0cda300f969729e4eaf46ff59db28b5e, type: 3}
+  - {fileID: 1512699274202345309, guid: 8d2d4fedc33dcc04ba448fb62ec93348, type: 3}
+  - {fileID: 5135017500989084241, guid: b0c43f967728b0d49bc91f0837d53818, type: 3}
 --- !u!54 &-157834515510385673
 Rigidbody:
   m_ObjectHideFlags: 0
