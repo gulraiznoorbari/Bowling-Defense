@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.43975785, g: 0.48818183, b: 0.5684032, a: 1}
+  m_IndirectSpecularColor: {r: 0.16245635, g: 0.20326506, b: 0.28290448, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -139,6 +139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
+      propertyPath: Time
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
+        type: 3}
       propertyPath: XPos
       value: 1
       objectReference: {fileID: 0}
@@ -156,7 +161,7 @@ PrefabInstance:
         type: 3}
       propertyPath: BallCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1605107854}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
       propertyPath: BallPrefab.Array.size
@@ -3634,11 +3639,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_cashText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1466688287}
     - target: {fileID: 1146689913523306200, guid: f1999eedfb473574db474007aaae33d1,
         type: 3}
       propertyPath: m_startingCash
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1146689913523306201, guid: f1999eedfb473574db474007aaae33d1,
         type: 3}
@@ -8258,6 +8263,8 @@ MonoBehaviour:
   time: 4
   CurrentTime: 0
   coins: 1
+  play: 0
+  uIController: {fileID: 0}
 --- !u!1001 &1242520368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8269,6 +8276,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ball Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
+        type: 3}
+      propertyPath: Time
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
@@ -8289,7 +8301,7 @@ PrefabInstance:
         type: 3}
       propertyPath: BallCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1605107854}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
       propertyPath: BallPrefab.Array.size
@@ -11353,6 +11365,8 @@ MonoBehaviour:
   time: 4
   CurrentTime: 0
   coins: 1
+  play: 0
+  uIController: {fileID: 0}
 --- !u!1 &1722487113
 GameObject:
   m_ObjectHideFlags: 0
@@ -14263,6 +14277,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
+      propertyPath: Time
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
+        type: 3}
       propertyPath: XPos
       value: 1
       objectReference: {fileID: 0}
@@ -14280,7 +14299,7 @@ PrefabInstance:
         type: 3}
       propertyPath: BallCounter
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1605107854}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
       propertyPath: BallPrefab.Array.size

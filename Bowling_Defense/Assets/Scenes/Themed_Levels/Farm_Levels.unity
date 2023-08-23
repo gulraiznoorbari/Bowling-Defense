@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2138677392}
-  m_IndirectSpecularColor: {r: 0.43975785, g: 0.48818183, b: 0.5684032, a: 1}
+  m_IndirectSpecularColor: {r: 0.16245635, g: 0.20326506, b: 0.28290448, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -37100,7 +37100,7 @@ PrefabInstance:
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
       propertyPath: Time
-      value: 8
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
@@ -37110,7 +37110,7 @@ PrefabInstance:
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
       propertyPath: totalball
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
@@ -37284,7 +37284,7 @@ PrefabInstance:
     - target: {fileID: 1146689913523306200, guid: f1999eedfb473574db474007aaae33d1,
         type: 3}
       propertyPath: m_startingCash
-      value: 250
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1146689913523306201, guid: f1999eedfb473574db474007aaae33d1,
         type: 3}
@@ -37444,7 +37444,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_effect.Array.data[0]
       value: 
-      objectReference: {fileID: 1593574840045950, guid: 72662043cbba6b849b99b0a1f9e4b33e,
+      objectReference: {fileID: 1593574840045950, guid: 45ae8ce3527dfcf46933282f370e9275,
         type: 3}
     - target: {fileID: 2802749060906408458, guid: 1c305d9bcfc508a439275b4048718ac1,
         type: 3}
@@ -37958,6 +37958,8 @@ MonoBehaviour:
   time: 10
   CurrentTime: 0
   coins: 1
+  play: 0
+  uIController: {fileID: 0}
 --- !u!114 &6437693099468318884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37974,6 +37976,8 @@ MonoBehaviour:
   time: 10
   CurrentTime: 0
   coins: 1
+  play: 0
+  uIController: {fileID: 0}
 --- !u!4 &6437693099468318885
 Transform:
   m_ObjectHideFlags: 0

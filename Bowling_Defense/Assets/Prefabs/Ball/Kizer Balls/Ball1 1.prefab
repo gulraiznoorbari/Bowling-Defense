@@ -114,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 350
   isgamelose: 0
-  ballSpawner: {fileID: 0}
 --- !u!114 &5875041287476208804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +219,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114231994765813858, guid: f980f35b2665e65409a449e52e961c09, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f980f35b2665e65409a449e52e961c09, type: 3}
 --- !u!4 &3449230072003157938 stripped
 Transform:

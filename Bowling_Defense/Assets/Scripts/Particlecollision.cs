@@ -10,10 +10,12 @@ public class Particlecollision : MonoBehaviour
     [SerializeField] GameObject Effect;
     // [SerializeField] float CoinDestroyTime;
     [SerializeField] float EffectDestroyTime;
+    private BallSpawner ballSpawner;
     // Bank bank;
     // Start is called before the first frame update
     void Start()
     {
+        ballSpawner = FindObjectOfType<BallSpawner>();
         // bank = FindObjectOfType<Bank>();
     }
 

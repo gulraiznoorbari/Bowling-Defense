@@ -17,12 +17,5 @@ public class Ball : MonoBehaviour
     {
         rb.AddForce(Vector3.forward * Speed * Time.deltaTime);   
     }
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Pin"))
-        {
-            isgamelose = true;
-            Debug.Log("Collision Enter");
-        }
-    }
+    
 }

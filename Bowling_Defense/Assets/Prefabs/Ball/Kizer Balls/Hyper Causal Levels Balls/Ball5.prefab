@@ -114,8 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 1000
   isgamelose: 0
-  BallDestroyPosition: {x: 0, y: 0, z: 2060}
-  BallPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &7443209536412486029
 MonoBehaviour:
   m_ObjectHideFlags: 0

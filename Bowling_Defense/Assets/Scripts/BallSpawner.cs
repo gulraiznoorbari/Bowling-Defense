@@ -19,16 +19,16 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] TextMeshProUGUI BallCounter;
     public int TotalBall() => totalball;
     public int CurrentBall() => currentball;
-    [SerializeField] UIManager uIController;
+    [SerializeField] UIManager UiManager;
     void Start()
     {
-        uIController = FindObjectOfType<UIManager>();
+        UiManager = FindObjectOfType<UIManager>();
         StartCoroutine(Ball());
     }
     void Update()
     {
-        bool win = uIController.Win();
-        bool lose = uIController.lose();
+        bool win = UiManager.Win();
+        bool lose = UiManager.lose();
         if (win)
         {
             Destroy(this.gameObject);
@@ -39,6 +39,7 @@ public class BallSpawner : MonoBehaviour
         }
         var pos = Random.Range(-XPos, XPos);
         SpawningPosition = new Vector3(pos, YPos, ZPos);
+        
         BallCounter.text = currentball.ToString() + "/" + totalball.ToString();
     }
     IEnumerator Ball()
