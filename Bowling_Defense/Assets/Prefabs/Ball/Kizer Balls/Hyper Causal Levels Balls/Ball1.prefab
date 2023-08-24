@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 400
   isgamelose: 0
+  sphereCollider: {fileID: 0}
 --- !u!114 &5875041287476208804
 MonoBehaviour:
   m_ObjectHideFlags: 0

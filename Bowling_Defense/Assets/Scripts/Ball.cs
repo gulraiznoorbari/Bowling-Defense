@@ -7,15 +7,16 @@ public class Ball : MonoBehaviour
     Rigidbody rb;
     [SerializeField] private float Speed;
     [SerializeField] bool isgamelose;
+    [SerializeField] SphereCollider sphereCollider;
     public bool GameLose() => isgamelose;
     private void Start()
     {
-
         rb = GetComponent<Rigidbody>();
+        sphereCollider = GetComponent<SphereCollider>();
     }
     private void Update()
     {
-        rb.AddForce(Vector3.forward * Speed * Time.deltaTime);   
+        rb.AddForce(Vector3.forward * Speed * Time.deltaTime);
     }
     private void OnCollisionEnter(Collision other)
     {
@@ -23,6 +24,13 @@ public class Ball : MonoBehaviour
         {
             isgamelose = true;
             Debug.Log("Collision Enter");
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("PinBoundry"))
+        {
+            sphereCollider.radius = 1;
         }
     }
 }
