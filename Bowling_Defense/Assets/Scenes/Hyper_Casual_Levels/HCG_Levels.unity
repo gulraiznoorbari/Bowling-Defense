@@ -29885,8 +29885,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraShake: {fileID: 1527061273}
-  CameraShakeDuration: 0.2
-  CameraShakeMagnitude: 0.7
+  CameraShakeDuration: 0.3
+  CameraShakeMagnitude: 1
   m_gridOn: 0
   m_gridSize: 1
   m_gridToggle: {fileID: 0}
