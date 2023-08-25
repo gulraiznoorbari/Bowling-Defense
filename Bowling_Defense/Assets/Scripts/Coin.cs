@@ -13,6 +13,7 @@ public class Coin : MonoBehaviour
     [SerializeField] UIManager uIController;
 
     Bank bank;
+
     private void Start()
     {
         play = true;
@@ -21,6 +22,7 @@ public class Coin : MonoBehaviour
         CurrentTime = 0;
         CoinsEffect.Stop();
     }
+
     private void Update()
     {
         ParticleImage(play);

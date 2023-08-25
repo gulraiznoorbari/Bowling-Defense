@@ -9,15 +9,18 @@ public class Ball : MonoBehaviour
     [SerializeField] bool isgamelose;
     [SerializeField] SphereCollider sphereCollider;
     public bool GameLose() => isgamelose;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         sphereCollider = GetComponent<SphereCollider>();
     }
+
     private void Update()
     {
         rb.AddForce(Vector3.forward * Speed * Time.deltaTime);
     }
+
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Pin"))

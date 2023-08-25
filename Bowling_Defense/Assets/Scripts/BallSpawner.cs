@@ -20,12 +20,14 @@ public class BallSpawner : MonoBehaviour
     public int TotalBall() => totalball;
     public int CurrentBall() => currentball;
     [SerializeField] UIManager uIController;
-    void Start()
+
+    private void Start()
     {
         uIController = FindObjectOfType<UIManager>();
         StartCoroutine(Ball());
     }
-    void Update()
+
+    private void Update()
     {
         bool win = uIController.Win();
         bool lose = uIController.lose();
@@ -41,6 +43,7 @@ public class BallSpawner : MonoBehaviour
         SpawningPosition = new Vector3(pos, YPos, ZPos);
         BallCounter.text = currentball.ToString() + "/" + totalball.ToString();
     }
+
     IEnumerator Ball()
     {
         for (currentball = 1; currentball < totalball; currentball++)

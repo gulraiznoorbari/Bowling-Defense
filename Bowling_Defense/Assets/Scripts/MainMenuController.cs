@@ -11,6 +11,7 @@ public class MainMenuController : MonoBehaviour
         int NextScene = CurrentSscene + 1;
         SceneManager.LoadScene(NextScene);
     }
+
     public void ExitButton()
     {
         Application.Quit();

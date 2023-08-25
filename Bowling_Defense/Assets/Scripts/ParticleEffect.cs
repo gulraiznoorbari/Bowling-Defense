@@ -9,8 +9,8 @@ public class ParticleEffect : MonoBehaviour
     [SerializeField] float Reset;
     [SerializeField] float EffectTime;
     [SerializeField] GameObject[] Effect;
-    // Start is called before the first frame update
-    void Start()
+    
+    private void Start()
     {
         EffectDuration = 0f;
         foreach (GameObject effect in Effect)
@@ -19,10 +19,8 @@ public class ParticleEffect : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        //Particle();
         Debug.Log(EffectTime);
         if (!IsPlaying)
         {
@@ -36,6 +34,7 @@ public class ParticleEffect : MonoBehaviour
             }
         }
     }
+
     public void PointerDown(int item)
     {
         IsPlaying = true;
@@ -45,10 +44,12 @@ public class ParticleEffect : MonoBehaviour
             Effect[item].SetActive(true);
         }
     }
+
     public void PointerUp(int item)
     {
         IsPlaying = false;
     }
+
     // public void Particle()
     // {
     //     if (IsPlaying)

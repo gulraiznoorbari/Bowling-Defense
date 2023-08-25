@@ -7,14 +7,7 @@ public class Particlecollision : MonoBehaviour
     [SerializeField] GameObject Effect;
     [SerializeField] float EffectDestroyTime;
     [SerializeField] GameObject[] NonDestroyEffect;
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-
-    }
+    
     private void OnParticleCollision(GameObject other)
     {
         int range = Random.Range(0, NonDestroyEffect.Length);

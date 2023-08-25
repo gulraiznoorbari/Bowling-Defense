@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TornadoMovementController : MonoBehaviour
 {
-
     [SerializeField] float TornadoSpeed;
     [SerializeField] List<Transform> Waypoints = new List<Transform>();
-    void Start()
+
+    private void Start()
     {
         GameObject[] waypoint;
         waypoint = GameObject.FindGameObjectsWithTag("Waypoints");
@@ -17,13 +17,8 @@ public class TornadoMovementController : MonoBehaviour
         }
         StartCoroutine(TornadoMovement());
     }
-    void Update()
-    {
 
-    }
-
-
-    IEnumerator TornadoMovement()
+    private IEnumerator TornadoMovement()
     {
         foreach (Transform waypoint in Waypoints)
         {

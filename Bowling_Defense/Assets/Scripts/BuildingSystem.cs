@@ -28,6 +28,7 @@ public class BuildingSystem : MonoBehaviour
         bank = FindObjectOfType<Bank>();
         CursorEffect.SetActive(false);
     }
+
     private void Update()
     {
         if (m_pendingObject != null)
@@ -64,6 +65,7 @@ public class BuildingSystem : MonoBehaviour
             m_mousePosition = hit.point;
         }
     }
+
     public void PointerDown(int index)
     {
         IsButtonDown = true;
@@ -82,6 +84,7 @@ public class BuildingSystem : MonoBehaviour
             }
         }
     }
+
     public void PointerUp(int index)
     {
         IsButtonDown = false;
