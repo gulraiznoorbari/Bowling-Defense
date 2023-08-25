@@ -5693,7 +5693,7 @@ PrefabInstance:
     - target: {fileID: 2802749060906408458, guid: 1c305d9bcfc508a439275b4048718ac1,
         type: 3}
       propertyPath: CameraShakeDuration
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2802749060906408458, guid: 1c305d9bcfc508a439275b4048718ac1,
         type: 3}
@@ -5703,7 +5703,7 @@ PrefabInstance:
     - target: {fileID: 2802749060906408458, guid: 1c305d9bcfc508a439275b4048718ac1,
         type: 3}
       propertyPath: CameraShakeMagnitude
-      value: 0.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2802749060906408458, guid: 1c305d9bcfc508a439275b4048718ac1,
         type: 3}
@@ -7316,7 +7316,7 @@ PrefabInstance:
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
       propertyPath: Time
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
@@ -19357,7 +19357,7 @@ PrefabInstance:
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
       propertyPath: Time
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 811711935825213737, guid: 68473f8eeaa11474a8cc9c5ff34304bf,
         type: 3}
