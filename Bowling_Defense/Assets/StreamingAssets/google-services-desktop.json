@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "188174418262",
+    "project_id": "bowling-defense-game",
+    "storage_bucket": "bowling-defense-game.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188174418262:android:58d3cb29193d4f2f89d6f7",
+        "android_client_info": {
+          "package_name": "com.TeamMaverick.BowlingDefense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188174418262-etqsmj7crpcv0ocpdt5camv34o1is40o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0TyNyAq6OE1SHvuxKxwAiJsJJedA8euU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188174418262-etqsmj7crpcv0ocpdt5camv34o1is40o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
