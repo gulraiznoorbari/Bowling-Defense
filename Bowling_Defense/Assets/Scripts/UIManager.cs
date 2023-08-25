@@ -14,12 +14,13 @@ public class UIManager : MonoBehaviour
     private BallSpawner ballSpawner;
     [SerializeField] Pins[] PinsHolder;
     [SerializeField] public List<Pins> pins = new List<Pins>();
-    //Pins pinreference;
+    
     private void Awake()
     {
         PinsHolder = FindObjectsOfType<Pins>();
     }
-    void Start()
+
+    private void Start()
     {
         WinPanel.SetActive(false);
         LosePanel.SetActive(false);
@@ -30,12 +31,13 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    void Update()
+    private void Update()
     {
         GameWin();
         GameLose();
     }
-    void GameWin()
+
+    public void GameWin()
     {
         int totalball = ballSpawner.TotalBall();
         int currentball = ballSpawner.CurrentBall();
@@ -48,7 +50,8 @@ public class UIManager : MonoBehaviour
             }
         }
     }
-    void GameLose()
+
+    public void GameLose()
     {
         if (pins.Count == 0)
         {
@@ -59,11 +62,13 @@ public class UIManager : MonoBehaviour
             }
         }
     }
+
     public void RestartButton()
     {
         int CurrentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(CurrentScene);
     }
+    
     public void NextLevelButton()
     {
         int CurrentScene = SceneManager.GetActiveScene().buildIndex;
@@ -75,6 +80,7 @@ public class UIManager : MonoBehaviour
         }
         SceneManager.LoadSceneAsync(NextScene);
     }
+    
     public void BackButton()
     {
         SceneManager.LoadScene(0);
