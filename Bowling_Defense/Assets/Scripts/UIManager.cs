@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using AssetKits.ParticleImage.Enumerations;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject LosePanel;
+    [SerializeField] Toggle FastSpeedToggle;
+    [SerializeField] bool GameFast;
     [SerializeField] bool IsWin;
     [SerializeField] bool IsLose;
     public bool Win() => IsWin;
@@ -89,5 +93,16 @@ public class UIManager : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
+    }
+    public void GameSpeed()
+    {
+        if(FastSpeedToggle.isOn)
+        {
+            Time.timeScale = 2;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 }

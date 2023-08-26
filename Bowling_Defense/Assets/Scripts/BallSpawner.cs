@@ -41,7 +41,7 @@ public class BallSpawner : MonoBehaviour
         }
         var pos = Random.Range(-XPos, XPos);
         SpawningPosition = new Vector3(pos, YPos, ZPos);
-        BallCounter.text = currentball.ToString() + "/" + totalball.ToString();
+        BallCounter.text = "Wave " + currentball.ToString() + "/" + totalball.ToString();
     }
 
     IEnumerator Ball()
