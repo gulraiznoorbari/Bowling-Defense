@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject LosePanel;
+    [SerializeField] GameObject _confettis;
+    [SerializeField] AudioManager _audioManager;
     [SerializeField] bool IsWin;
     [SerializeField] bool IsLose;
     public bool Win() => IsWin;
@@ -47,6 +49,8 @@ public class UIManager : MonoBehaviour
             if (IsWin && !IsLose)
             {
                 WinPanel.SetActive(true);
+                _confettis.SetActive(true);
+                _audioManager.Play("LevelComplete");
             }
         }
     }
