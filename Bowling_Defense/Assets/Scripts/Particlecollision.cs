@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Particlecollision : MonoBehaviour
+public class ParticleCollision : MonoBehaviour
 {
     [SerializeField] GameObject Effect;
     [SerializeField] float EffectDestroyTime;

@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    Rigidbody rb;
+    private Rigidbody rb;
+    private SphereCollider sphereCollider;
+
     [SerializeField] private float Speed;
-    [SerializeField] bool isgamelose;
-    [SerializeField] SphereCollider sphereCollider;
-    public bool GameLose() => isgamelose;
+    [SerializeField] private bool _isGameLost;
+    public bool GameLose() => _isGameLost;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pin"))
         {
-            isgamelose = true;
+            _isGameLost = true;
             Debug.Log("Collision Enter");
         }
     }

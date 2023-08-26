@@ -8,7 +8,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject LosePanel;
     [SerializeField] GameObject _confettis;
-    [SerializeField] AudioManager _audioManager;
     [SerializeField] bool IsWin;
     [SerializeField] bool IsLose;
     public bool Win() => IsWin;
@@ -43,14 +42,13 @@ public class UIManager : MonoBehaviour
     {
         int totalball = ballSpawner.TotalBall();
         int currentball = ballSpawner.CurrentBall();
-        if (currentball == totalball)
+        if (currentball == totalball && pins.Count > 0 && IsWin == false)
         {
             IsWin = true;
             if (IsWin && !IsLose)
             {
                 WinPanel.SetActive(true);
                 _confettis.SetActive(true);
-                _audioManager.Play("LevelComplete");
             }
         }
     }
