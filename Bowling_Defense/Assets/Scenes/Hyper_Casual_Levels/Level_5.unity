@@ -257,7 +257,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1677877157}
           m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
           m_MethodName: PointerDown
           m_Mode: 3
@@ -273,7 +273,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1677877157}
           m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
           m_MethodName: PointerUp
           m_Mode: 3
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 508958294}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 5
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2388175760125918375}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: GameSpeed
         m_Mode: 1
@@ -1353,6 +1353,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   m_IsOn: 0
+--- !u!1 &462870565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8035007977329196112, guid: a8a1262318235dd4baabd80f5294b7c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1342988691}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &494337619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1633,6 +1639,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 246329276cc75f743baf0d2a87e83bd1, type: 3}
+--- !u!114 &508958294 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8768149129378919178, guid: 246329276cc75f743baf0d2a87e83bd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 508958293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3913419e976b7f45981d372cc3cda7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &509745762
 GameObject:
   m_ObjectHideFlags: 0
@@ -4676,7 +4694,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_cashText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1401384587}
     - target: {fileID: 1146689913523306200, guid: f1999eedfb473574db474007aaae33d1,
         type: 3}
       propertyPath: m_startingCash
@@ -9983,7 +10001,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1677877157}
           m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
           m_MethodName: PointerDown
           m_Mode: 3
@@ -9999,7 +10017,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1677877157}
           m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
           m_MethodName: PointerUp
           m_Mode: 3
@@ -10055,7 +10073,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 508958294}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 5
@@ -15175,7 +15193,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1677877157}
         m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
         m_MethodName: YesPlace
         m_Mode: 1
@@ -15225,6 +15243,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925067976}
   m_CullTransparentMesh: 1
+--- !u!1 &933189683 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7687030370964901831, guid: 3c571da69bcbc3044a80b736e4af301d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340753547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &943560371
 GameObject:
   m_ObjectHideFlags: 0
@@ -20322,7 +20346,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1677877157}
           m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
           m_MethodName: PointerDown
           m_Mode: 3
@@ -20338,7 +20362,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1677877157}
           m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
           m_MethodName: PointerUp
           m_Mode: 3
@@ -20394,7 +20418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 508958294}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 5
@@ -22002,21 +22026,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 508958294}
     - target: {fileID: 7687030371221025876, guid: 3c571da69bcbc3044a80b736e4af301d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
+      objectReference: {fileID: 2388175760125918375}
+    - target: {fileID: 7687030371221025876, guid: 3c571da69bcbc3044a80b736e4af301d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687030371221025876, guid: 3c571da69bcbc3044a80b736e4af301d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RestartButton
       objectReference: {fileID: 0}
     - target: {fileID: 7687030371521361672, guid: 3c571da69bcbc3044a80b736e4af301d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 508958294}
     - target: {fileID: 7687030371521361672, guid: 3c571da69bcbc3044a80b736e4af301d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 2388175760125918375}
+    - target: {fileID: 7687030371521361672, guid: 3c571da69bcbc3044a80b736e4af301d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687030371521361672, guid: 3c571da69bcbc3044a80b736e4af301d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: BackButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c571da69bcbc3044a80b736e4af301d, type: 3}
@@ -27793,7 +27837,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1677877157}
           m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
           m_MethodName: PointerDown
           m_Mode: 3
@@ -27809,7 +27853,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1677877157}
           m_TargetAssemblyTypeName: BuildingSystem, Assembly-CSharp
           m_MethodName: PointerUp
           m_Mode: 3
@@ -27865,7 +27909,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 508958294}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 5
@@ -28058,6 +28102,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c305d9bcfc508a439275b4048718ac1, type: 3}
+--- !u!114 &1677877157 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2802749060906408458, guid: 1c305d9bcfc508a439275b4048718ac1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1677877156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa77702948adf4a41b5bb81dab8a99c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1758785762
 GameObject:
   m_ObjectHideFlags: 0
@@ -28288,21 +28344,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 508958294}
     - target: {fileID: 2395702049940959025, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
+      objectReference: {fileID: 2388175760125918375}
+    - target: {fileID: 2395702049940959025, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2395702049940959025, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: BackButton
       objectReference: {fileID: 0}
     - target: {fileID: 2395702050625066060, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 508958294}
     - target: {fileID: 2395702050625066060, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
+      objectReference: {fileID: 2388175760125918375}
+    - target: {fileID: 2395702050625066060, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 2395702050625066060, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: NextLevelButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb, type: 3}
@@ -28355,6 +28431,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2070242783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2395702049679190426, guid: 3fb1f36d42c7d8a4fbecc5e5967839fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1885357366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2095936192
 GameObject:
   m_ObjectHideFlags: 0
@@ -33422,10 +33504,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0899f4474d2ec0e4dbd2feb9229fd6d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinPanel: {fileID: 0}
-  LosePanel: {fileID: 0}
-  FastSpeedToggle: {fileID: 0}
-  _confettis: {fileID: 0}
+  WinPanel: {fileID: 2070242783}
+  LosePanel: {fileID: 933189683}
+  FastSpeedToggle: {fileID: 320986958}
+  _confettis: {fileID: 462870565}
   GameFast: 0
   IsWin: 0
   IsLose: 0
@@ -33444,7 +33526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d663d3cec2b3e742b45c02db041bdec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinsEffect: {fileID: 0}
+  CoinsEffect: {fileID: 523512950}
   time: 5
   CurrentTime: 0
   coins: 2
@@ -33525,7 +33607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d663d3cec2b3e742b45c02db041bdec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinsEffect: {fileID: 0}
+  CoinsEffect: {fileID: 542611287}
   time: 5
   CurrentTime: 0
   coins: 2
