@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] bool GameFast;
     [SerializeField] bool IsWin;
     [SerializeField] bool IsLose;
+    [SerializeField] bool BallIsActive;
     public bool Win() => IsWin;
     public bool lose() => IsLose;
     private BallSpawner ballSpawner;
@@ -45,7 +46,8 @@ public class UIManager : MonoBehaviour
     {
         int totalball = ballSpawner.TotalBall();
         int currentball = ballSpawner.CurrentBall();
-        if (currentball == totalball)
+        int remainingball = ballSpawner.RemainingBallint();
+        if (currentball == totalball && remainingball == 0)
         {
             IsWin = true;
             if (IsWin && !IsLose)
@@ -69,6 +71,7 @@ public class UIManager : MonoBehaviour
 
     public void RestartButton()
     {
+        Time.timeScale = 1;
         int CurrentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(CurrentScene);
     }

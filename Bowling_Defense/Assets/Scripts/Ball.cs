@@ -25,8 +25,16 @@ public class Ball : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Pin"))
         {
+            Time.timeScale = 0.5f;
             isgamelose = true;
             Debug.Log("Collision Enter");
+        }
+    }
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Pin"))
+        {
+            Time.timeScale = 1;
         }
     }
     private void OnTriggerEnter(Collider other)

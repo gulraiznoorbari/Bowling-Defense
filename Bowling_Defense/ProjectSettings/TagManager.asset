@@ -9,6 +9,7 @@ TagManager:
   - Waypoints
   - Pin
   - PinBoundry
+  - End
   layers:
   - Default
   - TransparentFX
