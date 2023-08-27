@@ -5626,10 +5626,10 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 70
+  field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: 1
+  m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 32
@@ -6272,7 +6272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63d848d6a04f90f45a8eee55b5c78599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_cashText: {fileID: 0}
+  m_cashText: {fileID: 74401168}
   m_startingCash: 150
   m_currentCash: 0
   m_string: 
@@ -30822,12 +30822,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d663d3cec2b3e742b45c02db041bdec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinsEffect: {fileID: 0}
+  CoinsEffect: {fileID: 692478005}
   time: 4.5
   CurrentTime: 0
   coins: 1
   play: 0
-  uIController: {fileID: 0}
+  uIController: {fileID: 2388175758657906411}
 --- !u!1 &6437693097386557966
 GameObject:
   m_ObjectHideFlags: 0
@@ -30934,9 +30934,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d663d3cec2b3e742b45c02db041bdec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CoinsEffect: {fileID: 0}
+  CoinsEffect: {fileID: 1092580385}
   time: 4.5
   CurrentTime: 0
   coins: 1
   play: 0
-  uIController: {fileID: 0}
+  uIController: {fileID: 2388175758657906411}
