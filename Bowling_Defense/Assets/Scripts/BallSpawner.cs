@@ -15,10 +15,14 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] int currentball;
     private Vector3 SpawningPosition;
     [SerializeField] Transform SetParent;
-    [SerializeField] Transform[] BallPrefab;
+    [SerializeField] Ball[] BallPrefab;
     [SerializeField] TextMeshProUGUI BallCounter;
+    //[SerializeField] Ball[] balls;
+    [SerializeField] public List<Ball> RemainingBalls = new List<Ball>();
+    [SerializeField] int remainingballint;
     public int TotalBall() => totalball;
     public int CurrentBall() => currentball;
+    public int RemainingBallint() => remainingballint;
     [SerializeField] UIManager uIController;
 
     private void Start()
@@ -29,6 +33,7 @@ public class BallSpawner : MonoBehaviour
 
     private void Update()
     {
+        remainingballint = RemainingBalls.Count;
         bool win = uIController.Win();
         bool lose = uIController.lose();
         if (win)
@@ -41,7 +46,7 @@ public class BallSpawner : MonoBehaviour
         }
         var pos = Random.Range(-XPos, XPos);
         SpawningPosition = new Vector3(pos, YPos, ZPos);
-        BallCounter.text = currentball.ToString() + "/" + totalball.ToString();
+        BallCounter.text = "Wave " + currentball.ToString() + "/" + totalball.ToString();
     }
 
     IEnumerator Ball()
@@ -50,6 +55,8 @@ public class BallSpawner : MonoBehaviour
         {
             int index = Random.Range(0, BallPrefab.Length);
             Instantiate(BallPrefab[index], transform.position + SpawningPosition, transform.rotation, SetParent);
+            Ball balls = FindObjectOfType<Ball>();
+            RemainingBalls.Add(balls);
             yield return new WaitForSeconds(Time);
         }
     }

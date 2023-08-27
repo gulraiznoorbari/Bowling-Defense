@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using AssetKits.ParticleImage.Enumerations;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject LosePanel;
-    [SerializeField] GameObject _confettis;
+    [SerializeField] Toggle FastSpeedToggle;
+    [SerializeField] bool GameFast;
     [SerializeField] bool IsWin;
     [SerializeField] bool IsLose;
+    [SerializeField] bool BallIsActive;
     public bool Win() => IsWin;
     public bool lose() => IsLose;
     private BallSpawner ballSpawner;
@@ -42,13 +46,13 @@ public class UIManager : MonoBehaviour
     {
         int totalball = ballSpawner.TotalBall();
         int currentball = ballSpawner.CurrentBall();
-        if (currentball == totalball && pins.Count > 0 && IsWin == false)
+        int remainingball = ballSpawner.RemainingBallint();
+        if (currentball == totalball && remainingball == 0)
         {
             IsWin = true;
             if (IsWin && !IsLose)
             {
                 WinPanel.SetActive(true);
-                _confettis.SetActive(true);
             }
         }
     }
@@ -67,6 +71,7 @@ public class UIManager : MonoBehaviour
 
     public void RestartButton()
     {
+        Time.timeScale = 1;
         int CurrentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(CurrentScene);
     }
@@ -91,5 +96,16 @@ public class UIManager : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
+    }
+    public void GameSpeed()
+    {
+        if(FastSpeedToggle.isOn)
+        {
+            Time.timeScale = 2;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 }
