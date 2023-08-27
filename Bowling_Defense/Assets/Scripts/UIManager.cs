@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject WinPanel;
     [SerializeField] GameObject LosePanel;
     [SerializeField] Toggle FastSpeedToggle;
+    [SerializeField] GameObject _confettis;
     [SerializeField] bool GameFast;
     [SerializeField] bool IsWin;
     [SerializeField] bool IsLose;
@@ -53,6 +54,7 @@ public class UIManager : MonoBehaviour
             if (IsWin && !IsLose)
             {
                 WinPanel.SetActive(true);
+                _confettis.SetActive(true);
             }
         }
     }
