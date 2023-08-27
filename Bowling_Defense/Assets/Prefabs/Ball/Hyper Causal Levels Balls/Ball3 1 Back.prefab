@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5595080749812494700}
   - component: {fileID: 5595080749812494699}
   m_Layer: 0
-  m_Name: Ball3
+  m_Name: Ball3 1 Back
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54de3c2d4fb8e7c4fa99dced5ff69e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballDirection: 0
+  ballDirection: 1
   Speed: 800
   isgamelose: 0
   sphereCollider: {fileID: 0}

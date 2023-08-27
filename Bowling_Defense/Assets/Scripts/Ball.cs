@@ -2,8 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BallDirection
+{
+    Forward, Backward
+}
 public class Ball : MonoBehaviour
 {
+    [SerializeField] BallDirection ballDirection;
     Rigidbody rb;
     [SerializeField] private float Speed;
     [SerializeField] bool isgamelose;
@@ -18,7 +23,8 @@ public class Ball : MonoBehaviour
 
     private void Update()
     {
-        rb.AddForce(Vector3.forward * Speed * Time.deltaTime);
+        if (ballDirection == BallDirection.Forward) rb.AddForce(Vector3.forward * Speed * Time.deltaTime);
+        if (ballDirection == BallDirection.Backward) rb.AddForce(Vector3.back * Speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision other)

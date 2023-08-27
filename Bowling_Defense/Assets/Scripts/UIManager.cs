@@ -20,7 +20,7 @@ public class UIManager : MonoBehaviour
     private BallSpawner ballSpawner;
     [SerializeField] Pins[] PinsHolder;
     [SerializeField] public List<Pins> pins = new List<Pins>();
-    
+
     private void Awake()
     {
         PinsHolder = FindObjectsOfType<Pins>();
@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     {
         WinPanel.SetActive(false);
         LosePanel.SetActive(false);
+        _confettis.SetActive(false);
         ballSpawner = FindObjectOfType<BallSpawner>();
         foreach (Pins pin in PinsHolder)
         {
@@ -77,7 +78,7 @@ public class UIManager : MonoBehaviour
         int CurrentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(CurrentScene);
     }
-    
+
     public void NextLevelButton()
     {
         int CurrentScene = SceneManager.GetActiveScene().buildIndex;
@@ -89,7 +90,7 @@ public class UIManager : MonoBehaviour
         }
         SceneManager.LoadSceneAsync(NextScene);
     }
-    
+
     public void BackButton()
     {
         SceneManager.LoadScene(0);
@@ -101,7 +102,7 @@ public class UIManager : MonoBehaviour
     }
     public void GameSpeed()
     {
-        if(FastSpeedToggle.isOn)
+        if (FastSpeedToggle.isOn)
         {
             Time.timeScale = 2;
         }
