@@ -46,13 +46,20 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: c81d7272c511f4546b5485afb8228667, type: 3}
-    volume: 0.5
+    volume: 0.3
     pitch: 1
     loop: 1
     mute: 0
     source: {fileID: 0}
   - name: Click
     clip: {fileID: 8300000, guid: ea4eb59481646274b9febc8bacd12456, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    mute: 0
+    source: {fileID: 0}
+  - name: LevelComplete
+    clip: {fileID: 8300000, guid: 847ac1d3ea0df104caddd0e36a286203, type: 3}
     volume: 1
     pitch: 1
     loop: 0

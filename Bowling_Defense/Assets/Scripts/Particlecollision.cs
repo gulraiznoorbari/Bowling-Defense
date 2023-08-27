@@ -10,7 +10,7 @@ public static partial class Events
     public static void BallColided(Vector3 position) => OnBallCollided?.Invoke(position);
 }
 
-public class Particlecollision : MonoBehaviour
+public class ParticleCollision : MonoBehaviour
 {
     [SerializeField] BallSpawner ballSpawner;
     [SerializeField] GameObject Effect;
