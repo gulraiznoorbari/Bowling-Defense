@@ -128,8 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54de3c2d4fb8e7c4fa99dced5ff69e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballDirection: 0
   Speed: 750
-  _isGameLost: 0
+  isgamelose: 0
+  sphereCollider: {fileID: 0}
 --- !u!114 &4100939334276002161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ff8918fcdff444abea27ae2d63af07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ballSpawner: {fileID: 0}
   Effect: {fileID: 1298315647077242, guid: 72160083e1a24a94b88cb874c61f8d39, type: 3}
   EffectDestroyTime: 2
   NonDestroyEffect:
